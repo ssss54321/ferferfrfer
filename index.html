@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <script src="Build/Cesium/Cesium.js"></script>
+    <link rel="stylesheet" href="Build/Cesium/Widgets/widgets.css">
+   
+
+</head>
+    <body>
+
+<input type="button"value=" BIENVENIDOS ....COVID 19 EVOLUCIÓN EN COLOMBIA"><br><br>
+<div id="cesiumViewer"></div>    
+<script>
+let viewer= new Cesium.Viewer("cesiumViewer");
+let czml=new Cesium.CzmlDataSource();
+let elementos= czml.load("colombia.czml");
+viewer.dataSources.add(czml);
+viewer.zoomTo(elementos);
+</script>
+</body>
+</html>
